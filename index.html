@@ -3,16 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title id="doc-title">Zexa Solutions Group | Industrial Maintenance &amp; Turnarounds in Saudi Arabia</title>
 <meta id="doc-desc" name="description" content="Turnaround execution, static equipment maintenance and mechanical support for petrochemical and refining plants across Saudi Arabia.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMxOTJCNDEiLz48dGV4dCB4PSIzMiIgeT0iNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+WjwvdGV4dD48L3N2Zz4=">
+<link rel="canonical" href="https://www.zexasolutions.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zexa Solutions Group">
+<meta property="og:title" content="Zexa Solutions Group | Industrial Maintenance &amp; Turnarounds in Saudi Arabia">
+<meta property="og:description" content="Turnaround execution, static equipment maintenance and mechanical support for petrochemical and refining plants across Saudi Arabia.">
+<meta property="og:url" content="https://www.zexasolutions.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zexa Solutions Group | Industrial Maintenance &amp; Turnarounds in Saudi Arabia">
+<meta name="twitter:description" content="Turnaround execution, static equipment maintenance and mechanical support for petrochemical and refining plants across Saudi Arabia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
+  color-scheme: light;
   --navy:#192B41; --navy-deep:#101E2E;
   --blue:#2964A8; --blue-hi:#3176C4; --blue-wash:#EFF4FA;
-  --slate:#5B6572; --slate-lt:#8A9099;
+  --slate:#5B6572; --slate-lt:#6B7077;
   --line:#E1E6EC; --line-2:#D3DAE2; --wash:#F6F8FA; --white:#fff;
   --err:#B3261E; --err-wash:#FCEEED;
   --h:'Space Grotesk','Inter',sans-serif; --b:'Inter',Arial,sans-serif;
@@ -30,7 +44,7 @@ h1,h2,h3,h4{font-family:var(--h);font-weight:700;line-height:1.2;margin:0}
 p{margin:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:24px}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-section[id]{scroll-margin-top:90px}
+[id]{scroll-margin-top:130px}
 .skip{position:absolute;inset-inline-start:-9999px;top:0;background:#fff;color:var(--navy);padding:12px 18px;z-index:200;font-weight:700}
 .skip:focus{inset-inline-start:0}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
@@ -51,6 +65,7 @@ html[dir="rtl"] .btn{font-family:'Noto Kufi Arabic',var(--b)}
 .topbar .wrap{display:flex;align-items:center;gap:24px;height:38px;overflow:hidden}
 .topbar .sp{flex:1}
 .topbar a:hover{color:#fff}
+.wa-link{display:inline-flex;align-items:center}
 @media(max-width:760px){.topbar .sm{display:none}}
 
 .nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -77,10 +92,18 @@ html[dir="rtl"] .drawer.open{transform:translateX(0)}
 .drawer nav a{padding:12px 6px;font-size:15px;font-weight:600;border-radius:var(--r)}
 .drawer nav a:hover{background:var(--wash)}
 .drawer .btn{width:100%;margin-bottom:10px}
+.modal{position:fixed;inset:0;z-index:95;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(16,30,46,.55)}
+.modal[hidden]{display:none}
+.modal-panel{background:#fff;border-radius:var(--r);max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:36px 30px;position:relative}
+.modal-close{position:absolute;top:18px;inset-inline-end:18px;border:1px solid var(--line-2);border-radius:var(--r);background:#fff;width:38px;height:38px;font-size:16px;cursor:pointer;line-height:1}
 
-.hero{position:relative;background:var(--navy-deep);color:#fff;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(16,30,46,.97) 0%,rgba(16,30,46,.88) 50%,rgba(41,100,168,.30) 100%)}
-html[dir="rtl"] .hero::before{background:linear-gradient(255deg,rgba(16,30,46,.97) 0%,rgba(16,30,46,.88) 50%,rgba(41,100,168,.30) 100%)}
+.hero{position:relative;background:var(--navy-deep) url('https://images.pexels.com/photos/15893881/pexels-photo-15893881.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;color:#fff;overflow:hidden}
+.photo-bg{position:relative;background-size:cover;background-position:center;background-color:var(--navy);color:#fff}
+.photo-bg::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(16,30,46,.95) 0%,rgba(16,30,46,.91) 50%,rgba(16,30,46,.88) 100%)}
+html[dir="rtl"] .photo-bg::before{background:linear-gradient(255deg,rgba(16,30,46,.95) 0%,rgba(16,30,46,.91) 50%,rgba(16,30,46,.88) 100%)}
+.photo-bg>.wrap{position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(16,30,46,.96) 0%,rgba(16,30,46,.92) 50%,rgba(23,52,89,.88) 100%)}
+html[dir="rtl"] .hero::before{background:linear-gradient(255deg,rgba(16,30,46,.96) 0%,rgba(16,30,46,.92) 50%,rgba(23,52,89,.88) 100%)}
 .hero::after{content:"";position:absolute;inset-inline-end:-8%;top:-12%;width:520px;height:520px;background:radial-gradient(circle,rgba(41,100,168,.35),transparent 62%)}
 .hero .wrap{position:relative;padding-block:clamp(64px,10vw,104px) clamp(72px,10vw,112px)}
 .slogan{font-family:var(--h);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#7FAEE0;margin-bottom:18px}
@@ -89,14 +112,15 @@ h1{font-size:clamp(29px,4.2vw,50px);letter-spacing:-.02em;max-width:20ch;margin-
 html[dir="rtl"] h1{letter-spacing:0}
 .hero p.lede{font-size:17px;line-height:1.7;color:rgba(255,255,255,.8);max-width:60ch;margin-bottom:32px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.facts{position:relative;display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);margin-top:clamp(48px,7vw,72px)}
-.facts div{flex:1 1 200px;padding-block:26px;padding-inline-end:28px;border-inline-end:1px solid rgba(255,255,255,.16)}
-.facts div:last-child{border-inline-end:0}
-.facts .v{font-family:var(--h);font-weight:700;font-size:30px;color:#fff;line-height:1}
-html[dir="rtl"] .facts .v{font-family:'Noto Kufi Arabic',var(--h)}
-.facts .l{font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:9px}
+.facts{position:relative;display:flex;flex-wrap:wrap;border-top:1px solid rgba(127,174,224,.22);margin-top:clamp(48px,7vw,72px)}
+.facts>div{position:relative;flex:1 1 200px;padding-block:28px 26px;padding-inline-end:28px;border-inline-end:1px solid rgba(127,174,224,.22)}
+.facts>div::before{content:"";position:absolute;top:-1px;inset-inline-start:0;width:34px;height:2px;background:var(--blue-hi)}
+.facts>div:last-child{border-inline-end:0}
+.facts .v{font-family:var(--h);font-weight:700;font-size:31px;color:#fff;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+html[dir="rtl"] .facts .v{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:0}
+.facts .l{font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#B9C6D6;margin-top:10px}
 html[dir="rtl"] .facts .l{letter-spacing:0}
-@media(max-width:700px){.facts div{flex:1 1 100%;border-inline-end:0;border-bottom:1px solid rgba(255,255,255,.16);padding-inline-end:0}.facts div:last-child{border-bottom:0}}
+@media(max-width:700px){.facts>div{flex:1 1 100%;border-inline-end:0;border-bottom:1px solid rgba(127,174,224,.22);padding-inline-end:0}.facts>div:last-child{border-bottom:0}}
 
 section{padding-block:clamp(64px,8vw,96px)}
 .label{font-family:var(--h);font-size:12.5px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
@@ -107,8 +131,11 @@ html[dir="rtl"] h2{letter-spacing:0}
 .sechead p{color:var(--slate);margin-top:14px;font-size:16.5px}
 
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;background:#fff;transition:border-color .18s,box-shadow .18s}
-.card:hover,.card:focus-within{border-color:var(--blue);box-shadow:0 6px 22px rgba(25,43,65,.08)}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;background:#fff;transition:border-color .18s,box-shadow .18s,transform .18s}
+.card:hover,.card:focus-within{border-color:var(--blue);box-shadow:0 12px 28px rgba(41,100,168,.14);transform:translateY(-3px)}
+.card-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--blue-wash);color:var(--blue);margin-bottom:16px;transition:background .18s,color .18s}
+.card-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card:hover .card-icon,.card:focus-within .card-icon{background:var(--blue);color:#fff}
 .card h3{font-size:17.5px;line-height:1.35;margin-bottom:10px}
 .card p{font-size:14.5px;color:var(--slate);line-height:1.6}
 .card ul{list-style:none;margin-top:14px;display:grid;gap:7px}
@@ -119,7 +146,8 @@ html[dir="rtl"] h2{letter-spacing:0}
 
 .process{background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none}
-.step{position:relative;padding-top:22px;border-top:2px solid var(--line-2)}
+.step{position:relative;padding-top:24px;border-top:2px solid var(--line-2)}
+.step::before{content:"";position:absolute;top:-2px;inset-inline-start:0;width:30px;height:2px;background:var(--blue-hi)}
 .step .n{font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--blue);margin-bottom:8px}
 html[dir="rtl"] .step .n{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:0}
 .step h3{font-size:17px;margin-bottom:8px}
@@ -133,26 +161,35 @@ html[dir="rtl"] .step .n{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
 .why p{font-size:14.5px;color:var(--slate)}
 @media(max-width:860px){.why{grid-template-columns:1fr;gap:26px}}
 
-.hse{background:var(--navy);color:#fff}
+.hse{background-image:url('https://images.pexels.com/photos/37668423/pexels-photo-37668423.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.esg{background-image:url('https://images.pexels.com/photos/6754758/pexels-photo-6754758.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.esg-inner{max-width:74ch}
+.esg .label{color:#7FAEE0}
+.esg-body{margin-top:16px;font-size:16.5px;line-height:1.8;color:rgba(255,255,255,.92)}
 .hse .label{color:#7FAEE0}
 .hse-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
-.hse p.intro{color:rgba(255,255,255,.78);font-size:16px;max-width:52ch;margin-top:16px}
-.hse-stats{border:1px solid rgba(255,255,255,.18);border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.03)}
-.hse-stats div{display:flex;justify-content:space-between;align-items:baseline;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.14)}
+.hse p.intro{color:rgba(255,255,255,.9);font-size:16px;max-width:52ch;margin-top:16px}
+.hse-stats{border:1px solid rgba(127,174,224,.22);border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.03)}
+.hse-stats div{position:relative;display:flex;justify-content:space-between;align-items:baseline;padding:18px 22px 18px 30px;border-bottom:1px solid rgba(127,174,224,.16)}
+html[dir="rtl"] .hse-stats div{padding:18px 30px 18px 22px}
+.hse-stats div::before{content:"";position:absolute;inset-inline-start:0;top:50%;transform:translateY(-50%);width:3px;height:16px;border-radius:2px;background:var(--blue-hi)}
 .hse-stats div:last-child{border-bottom:0}
-.hse-stats .k{font-size:14px;color:rgba(255,255,255,.72)}
+.hse-stats .k{font-size:14px;color:#B9C6D6}
 .hse-stats .v{font-family:var(--h);font-weight:700;font-size:18px;color:#fff}
-.hse-note{margin-top:16px;font-size:12.5px;color:rgba(255,255,255,.5)}
+.hse-note{margin-top:16px;font-size:12.5px;color:#8FA3BC}
 @media(max-width:900px){.hse-grid{grid-template-columns:1fr;gap:32px}}
 
 .ind .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
-.ind .chips li{border:1px solid var(--line-2);border-radius:var(--r);padding:11px 18px;font-size:14px;font-weight:500;background:var(--wash)}
+.ind .chips li{border:1px solid var(--line-2);border-radius:var(--r);padding:11px 18px;font-size:14px;font-weight:500;background:var(--wash);transition:border-color .15s,background .15s,color .15s}
+.ind .chips li:hover{border-color:var(--blue);background:var(--blue-wash);color:var(--blue)}
 
 .about{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start}
 .about p{color:var(--slate);margin-bottom:16px;line-height:1.7}
 .mvv{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.mvv div{padding:20px 22px;border-bottom:1px solid var(--line)}
-.mvv div:last-child{border-bottom:0}
+.mvv>div{padding:20px 22px;border-bottom:1px solid var(--line)}
+.mvv>div:last-child{border-bottom:0}
+.mvv-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--blue-wash);color:var(--blue);margin-bottom:11px}
+.mvv-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .mvv .k{font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
 html[dir="rtl"] .mvv .k{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:0}
 .mvv p{font-size:14.5px;color:var(--navy);margin:0}
@@ -205,15 +242,16 @@ form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding
 .formmsg.error{background:var(--err-wash);color:var(--err)}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}}
 
-.foot{background:var(--navy-deep);color:rgba(255,255,255,.72);padding-top:72px;font-size:14.5px}
+.foot{position:relative;background:var(--navy-deep);color:rgba(255,255,255,.72);padding-top:72px;font-size:14.5px}
+.foot::before{content:"";position:absolute;top:0;inset-inline-start:0;inset-inline-end:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-hi))}
 .foot img.logo{height:36px;margin-bottom:18px}
 .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
-.foot h4{font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:15px}
+.foot h4{font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:#9AACC4;margin-bottom:15px}
 html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:0}
 .foot ul{list-style:none;display:grid;gap:9px}
 .foot a:hover{color:#7FAEE0}
 .foot dl{display:grid;gap:12px}
-.foot dt{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.foot dt{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#9AACC4}
 .foot dd{color:#fff}
 .fbot{border-top:1px solid rgba(255,255,255,.16);padding:20px 0;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:13px}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
@@ -227,7 +265,8 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
   <div class="wrap">
     <span data-i18n="address">Jubail Industrial City, Saudi Arabia</span>
     <span class="sp"></span>
-    <a href="tel:+966542424947" class="sm" style="unicode-bidi:plaintext">+966 54 242 4947</a>
+    <a href="https://wa.me/966530873624" target="_blank" rel="noopener" class="sm wa-link" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-inline-end:4px"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 9c0-.6.4-1 1-1h.6c.3 0 .5.2.6.5l.6 1.6c.1.3 0 .6-.2.8l-.6.6c.5 1 1.3 1.8 2.3 2.3l.6-.6c.2-.2.5-.3.8-.2l1.6.6c.3.1.5.3.5.6v.6c0 .6-.4 1-1 1-3.3 0-6-2.7-6-6z"/></svg><span data-i18n="labelWhatsapp">WhatsApp</span></a>
+    <a href="tel:+966530873624" class="sm" style="unicode-bidi:plaintext">+966 53 087 3624</a>
     <a href="mailto:info@zexasolutions.com">info@zexasolutions.com</a>
   </div>
 </div>
@@ -239,8 +278,10 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#process" data-i18n="nav.process">How we work</a>
       <a href="#hse" data-i18n="nav.hse">HSE</a>
+      <a href="#esg" data-i18n="nav.esg">ESG</a>
       <a href="#industries" data-i18n="nav.industries">Industries</a>
       <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#suppliers" data-i18n="nav.suppliers">Suppliers</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="rightgroup">
@@ -261,8 +302,10 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
     <a href="#services" data-i18n="nav.services">Services</a>
     <a href="#process" data-i18n="nav.process">How we work</a>
     <a href="#hse" data-i18n="nav.hse">HSE</a>
+    <a href="#esg" data-i18n="nav.esg">ESG</a>
     <a href="#industries" data-i18n="nav.industries">Industries</a>
     <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#suppliers" data-i18n="nav.suppliers">Suppliers</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
   <a href="#contact" class="btn btn-primary" data-i18n="ctaQuote">Request a Quote</a>
@@ -281,7 +324,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
       <a href="#services" class="btn btn-onDark" data-i18n="ctaServices">View Our Services</a>
     </div>
     <div class="facts">
-      <div><div class="v" data-i18n="facts.0.v">11</div><div class="l" data-i18n="facts.0.l">Service lines</div></div>
+      <div><div class="v" data-i18n="facts.0.v">13</div><div class="l" data-i18n="facts.0.l">Service lines</div></div>
       <div><div class="v" data-i18n="facts.1.v">Zero Injuries</div><div class="l" data-i18n="facts.1.l">HSE standard</div></div>
       <div><div class="v" data-i18n="facts.2.v">GCC</div><div class="l" data-i18n="facts.2.l">Site coverage</div></div>
     </div>
@@ -293,7 +336,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
     <div class="sechead">
       <p class="label" data-i18n="servicesLabel">What we do</p>
       <h2 data-i18n="servicesTitle">Our Services</h2>
-      <p data-i18n="servicesIntro">Eleven service lines under one contract and one point of coordination, from turnaround execution on site through to sourcing and RFQ management off it.</p>
+      <p data-i18n="servicesIntro">Thirteen service lines under one contract and one point of coordination, from turnaround execution on site through to sourcing and RFQ management off it.</p>
     </div>
     <div class="grid3" id="services-grid"></div>
   </div>
@@ -319,7 +362,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
   </div>
 </section>
 
-<section id="hse" class="hse">
+<section id="hse" class="hse photo-bg">
   <div class="wrap">
     <div class="hse-grid">
       <div>
@@ -329,8 +372,18 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
       </div>
       <div>
         <div class="hse-stats" id="hse-stats"></div>
-        <p class="hse-note" data-i18n="hseNote">Figures current as of the latest reporting period.</p>
+        <p class="hse-note" data-i18n="hseNote">This standard is applied on every scope, from day one.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="esg" class="esg photo-bg">
+  <div class="wrap">
+    <div class="esg-inner">
+      <p class="label" data-i18n="esgLabel">ESG</p>
+      <h2 data-i18n="esgTitle">Every Purchase Order Carries a Guaranteed ESG Contribution</h2>
+      <p class="esg-body" data-i18n="esgBody">Responsible delivery is not a separate initiative at Zexa Solutions Group. It is built into the same methodology behind every scope: formal qualification and scoping before mobilisation, a Zero-Harm HSE standard applied to every crew and every subcontracted line, an equipment-rental model that reduces idle-asset waste instead of pushing unnecessary new purchases, and a documented, contract-administered process from RFQ through to handover. Every purchase order carries a guaranteed contribution to an ESG initiative, funded from within our margin, not billed to the client and not conditional on scope size. Being commercially registered and based in Jubail Industrial City already supports the local employment and governance transparency our clients are accountable for, and this margin-funded contribution extends that commitment into every single order we deliver.</p>
     </div>
   </div>
 </section>
@@ -352,18 +405,34 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
       <div>
         <p class="label" data-i18n="aboutLabel">Company</p>
         <h2 style="margin-bottom:20px" data-i18n="aboutTitle">About Zexa Solutions</h2>
-        <p data-i18n="aboutHomeText">Zexa Solutions Group is an industrial services partner to the petrochemical, refining, energy and manufacturing sectors in Saudi Arabia and the wider GCC.</p>
+        <p data-i18n="aboutHomeText">Zexa Solutions Group is an industrial services partner to the petrochemical, refining, energy and manufacturing sectors in Saudi Arabia and the wider GCC. We deliver plant maintenance, turnaround execution, static equipment services and mechanical support through one accountable team, which means fewer interfaces on site and one number to call when a scope changes.</p>
         <p style="color:var(--navy);font-weight:600" data-i18n="benefitsIntro">Working to a Zero Harm, Zero Injuries standard, we help our clients:</p>
         <ul class="benefits" id="benefits-list"></ul>
-        <p style="margin-top:22px" data-i18n="closingPara">We don't just execute the scope.</p>
+        <p style="margin-top:22px" data-i18n="closingPara">We don't just execute the scope. We hand back a unit that restarts safely, on schedule, with the documentation to prove it.</p>
         <p class="tagline" data-i18n="aboutTagline">One Partner. Zero Harm. Maximum Reliability.</p>
       </div>
       <div class="mvv">
-        <div><div class="k" data-i18n="missionLabel">Mission</div><p data-i18n="missionText">…</p></div>
-        <div><div class="k" data-i18n="visionLabel">Vision</div><p data-i18n="visionText">…</p></div>
-        <div><div class="k" data-i18n="valuesLabel">Values</div><p data-i18n="valuesText">…</p></div>
+        <div><div class="mvv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div><div class="k" data-i18n="missionLabel">Mission</div><p data-i18n="missionText">Execute maintenance and turnaround scopes that return process units to safe, reliable operation on schedule.</p></div>
+        <div><div class="mvv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="k" data-i18n="visionLabel">Vision</div><p data-i18n="visionText">To be the maintenance and turnaround partner of choice for petrochemical and refining operators in Saudi Arabia.</p></div>
+        <div><div class="mvv-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4.3"/></svg></div><div class="k" data-i18n="valuesLabel">Values</div><p data-i18n="valuesText">Zero-harm HSE discipline, technical precision, and accountability on every scope of work.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="suppliers" style="background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="label" data-i18n="suppliersLabel">For Suppliers &amp; Partners</p>
+      <h2 data-i18n="suppliersTitle">Our Supplier &amp; Partner Network</h2>
+      <p data-i18n="suppliersBody">Zexa Solutions Group works with a qualified network of suppliers and specialist partners across materials, equipment and specialised services, spanning our thirteen service lines. Every engagement runs through a formal qualification, scoping and contract-administration process, with one accountable point of contact instead of an ad-hoc purchase order.</p>
+    </div>
+    <ul class="benefits" id="suppliers-list">
+      <li data-i18n="supplierPoint1">Commercially registered in Jubail Industrial City</li>
+      <li data-i18n="supplierPoint2">Single point of coordination across mechanical, static equipment, scaffolding, rental and sourcing scopes, under one contract and one team accountable for delivery</li>
+      <li data-i18n="supplierPoint3">Zero-Harm HSE standard applies to every party working under our scope</li>
+    </ul>
+    <a href="#contact" id="suppliers-cta" class="btn btn-primary" style="margin-top:24px" data-i18n="suppliersCta">Request Our Capability Statement</a>
   </div>
 </section>
 
@@ -371,7 +440,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
   <div class="wrap">
     <div>
       <h2 data-i18n="ctaBannerTitle">Have a scope you need priced?</h2>
-      <p data-i18n="ctaBannerText">Send drawings, an equipment list, or a rough description. We reply within one working day.</p>
+      <p data-i18n="ctaBannerText">Send drawings, an equipment list, or a rough description. We reply within one working day. For an emergency callout, call instead.</p>
     </div>
     <a href="#contact" class="btn btn-outline" data-i18n="ctaQuote">Request a Quote</a>
   </div>
@@ -387,12 +456,14 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
       <div class="info">
         <dl>
           <div><dt data-i18n="labelAddress">Address</dt><dd data-i18n="address">Jubail Industrial City, Saudi Arabia</dd></div>
-          <div><dt data-i18n="labelPhone">Phone</dt><dd><a href="tel:+966542424947" style="unicode-bidi:plaintext">+966 54 242 4947</a></dd></div>
+          <div><dt data-i18n="labelPhone">Phone</dt><dd><a href="tel:+966530873624" style="unicode-bidi:plaintext">+966 53 087 3624</a></dd></div>
+          <div><dt data-i18n="labelWhatsapp">WhatsApp</dt><dd><a href="https://wa.me/966530873624" target="_blank" rel="noopener" class="wa-link"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px;margin-inline-end:5px"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 9c0-.6.4-1 1-1h.6c.3 0 .5.2.6.5l.6 1.6c.1.3 0 .6-.2.8l-.6.6c.5 1 1.3 1.8 2.3 2.3l.6-.6c.2-.2.5-.3.8-.2l1.6.6c.3.1.5.3.5.6v.6c0 .6-.4 1-1 1-3.3 0-6-2.7-6-6z"/></svg><span data-i18n="whatsappCta">Chat on WhatsApp</span></a></dd></div>
           <div><dt data-i18n="labelEmail">Email</dt><dd><a href="mailto:info@zexasolutions.com">info@zexasolutions.com</a></dd></div>
         </dl>
         <div class="mapbox">
           <iframe src="https://www.google.com/maps?q=Jubail+Industrial+City,Saudi+Arabia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Zexa Solutions location, Jubail Industrial City"></iframe>
         </div>
+        <a href="https://www.google.com/maps?q=Jubail+Industrial+City,Saudi+Arabia" target="_blank" rel="noopener" class="sm" style="display:inline-block;margin-top:10px" data-i18n="mapLinkText">Open in Google Maps</a>
       </div>
 
       <form id="rfq-form" novalidate>
@@ -424,7 +495,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
             <div class="fr-sub" data-i18n="fileTypes">PDF, DOC, DOCX, JPG or PNG</div>
           </div>
           <div class="filechip" id="rfq-filechip"></div>
-          <div class="err" role="alert" data-i18n="fileErr">That file is over 10 MB, or isn't a supported type.</div>
+          <div class="err" role="alert" data-i18n="fileErr">That file is over 10 MB, or isn't a supported type. Attach a PDF, DOC, DOCX, JPG or PNG under 10 MB.</div>
         </div>
 
         <div class="honeypot" aria-hidden="true">
@@ -432,34 +503,35 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
           <input id="rfq-honey" name="_honey" type="text" tabindex="-1" autocomplete="off">
         </div>
 
-        <p class="consent"><span data-i18n="consentNote">We use the details you send only to respond to your enquiry and don't share them with third parties.</span> <a href="#privacy" data-i18n="privacyLink">Privacy Notice</a></p>
+        <p class="consent"><span data-i18n="consentNote">We use the details you send only to respond to your enquiry and don't share them with third parties.</span> <a href="#" class="privacy-link" data-i18n="privacyLink">Privacy Notice</a></p>
 
         <button type="submit" class="btn btn-primary" id="rfq-submit" style="width:100%" data-i18n="formSend">Send Enquiry</button>
         <div class="formmsg ok" id="rfq-ok" role="status" data-i18n="formSentMsg">Enquiry received. We'll reply within one working day.</div>
-        <div class="formmsg error" id="rfq-error" role="alert" data-i18n="formErrorMsg">The message didn't send. Try again, or email info@zexasolutions.com directly.</div>
+        <div class="formmsg error" id="rfq-error" role="alert" data-i18n="formErrorMsg">The message didn't send. Your details are still in the form. Try again, or email info@zexasolutions.com directly.</div>
       </form>
     </div>
   </div>
 </section>
 
-<section id="privacy" class="contact" style="border-top:1px solid var(--line)">
-  <div class="wrap">
+</main>
+
+<div id="privacy-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" hidden>
+  <div class="modal-panel">
+    <button class="modal-close" id="privacy-modal-close" type="button" aria-label="Close">✕</button>
     <div class="sechead">
       <p class="label" data-i18n="privacyLabel">Data &amp; Privacy</p>
-      <h2 data-i18n="privacyTitle">Privacy Notice</h2>
-      <p data-i18n="privacyIntro">This notice covers the information collected through the two forms on this site: the quote enquiry and the job application. It does not cover any other data handling by Zexa Solutions Group.</p>
+      <h2 id="privacy-modal-title" data-i18n="privacyTitle">Privacy Notice</h2>
+      <p data-i18n="privacyIntro">This notice covers the information collected through the quote enquiry form on this site. It does not cover any other data handling by Zexa Solutions Group.</p>
     </div>
     <div class="mvv" style="max-width:760px">
       <div><div class="k" data-i18n="privacyWhatLabel">What we collect</div><p data-i18n="privacyWhatText">Name, company, email, phone number where given, the message you enter, and any file you choose to attach.</p></div>
-      <div><div class="k" data-i18n="privacyWhyLabel">Why we collect it</div><p data-i18n="privacyWhyText">Solely to respond to your enquiry or application. We don't use it for marketing and don't sell or rent it to anyone.</p></div>
+      <div><div class="k" data-i18n="privacyWhyLabel">Why we collect it</div><p data-i18n="privacyWhyText">Solely to respond to your enquiry. We don't use it for marketing and don't sell or rent it to anyone.</p></div>
       <div><div class="k" data-i18n="privacyWhoLabel">Who processes it</div><p data-i18n="privacyWhoText">Submissions are delivered to us through FormSubmit, a third-party form-relay service. FormSubmit transmits the message to our inbox and does not use it for any other purpose.</p></div>
-      <div><div class="k" data-i18n="privacyRetentionLabel">How long we keep it</div><p data-i18n="privacyRetentionText">Quote enquiries are kept for as long as needed to respond and follow up on the scope. Job applications are kept on file for future openings unless you ask us to delete them.</p></div>
+      <div><div class="k" data-i18n="privacyRetentionLabel">How long we keep it</div><p data-i18n="privacyRetentionText">Quote enquiries are kept for as long as needed to respond and follow up on the scope, unless you ask us to delete them sooner.</p></div>
       <div><div class="k" data-i18n="privacyRightsLabel">Your rights</div><p><span data-i18n="privacyRightsText">You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by emailing</span> <a href="mailto:info@zexasolutions.com" style="color:var(--blue);font-weight:600">info@zexasolutions.com</a>.</p></div>
     </div>
   </div>
-</section>
-
-</main>
+</div>
 
 <footer class="foot">
   <div class="wrap">
@@ -469,7 +541,7 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
         <p data-i18n="footerTagline">Industrial maintenance, turnaround execution and equipment support for petrochemical and refining plants in Saudi Arabia.</p>
       </div>
       <div>
-        <h4 data-i18n="servicesTitle">Services</h4>
+        <h4 data-i18n="servicesTitle">Our Services</h4>
         <ul id="footer-services"></ul>
       </div>
       <div>
@@ -478,15 +550,18 @@ html[dir="rtl"] .foot h4{font-family:'Noto Kufi Arabic',var(--h);letter-spacing:
           <li><a href="#about" data-i18n="nav.about">About</a></li>
           <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
           <li><a href="#hse" data-i18n="nav.hse">HSE</a></li>
+          <li><a href="#esg" data-i18n="nav.esg">ESG</a></li>
+          <li><a href="#suppliers" data-i18n="nav.suppliers">Suppliers</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          <li><a href="#privacy" data-i18n="privacyLink">Privacy Notice</a></li>
+          <li><a href="#" class="privacy-link" data-i18n="privacyLink">Privacy Notice</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-i18n="contactLabel">Contact</h4>
+        <h4 data-i18n="contactLabel">Get in touch</h4>
         <dl>
           <dt data-i18n="labelAddress">Address</dt><dd data-i18n="address">Jubail Industrial City, Saudi Arabia</dd>
-          <dt data-i18n="labelPhone">Phone</dt><dd><a href="tel:+966542424947" style="unicode-bidi:plaintext">+966 54 242 4947</a></dd>
+          <dt data-i18n="labelPhone">Phone</dt><dd><a href="tel:+966530873624" style="unicode-bidi:plaintext">+966 53 087 3624</a></dd>
+          <dt data-i18n="labelWhatsapp">WhatsApp</dt><dd><a href="https://wa.me/966530873624" target="_blank" rel="noopener" class="wa-link"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px;margin-inline-end:5px"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.8-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 9c0-.6.4-1 1-1h.6c.3 0 .5.2.6.5l.6 1.6c.1.3 0 .6-.2.8l-.6.6c.5 1 1.3 1.8 2.3 2.3l.6-.6c.2-.2.5-.3.8-.2l1.6.6c.3.1.5.3.5.6v.6c0 .6-.4 1-1 1-3.3 0-6-2.7-6-6z"/></svg><span data-i18n="whatsappCta">Chat on WhatsApp</span></a></dd>
           <dt data-i18n="labelEmail">Email</dt><dd><a href="mailto:info@zexasolutions.com">info@zexasolutions.com</a></dd>
         </dl>
       </div>
@@ -506,25 +581,27 @@ var LANG = {
     dirName:"ltr", toggleLabel:"AR", drawerLangLabel:"العربية",
     skip:"Skip to content", menu:"MENU",
     address:"Jubail Industrial City, Saudi Arabia",
-    nav:{services:"Services",process:"How we work",hse:"HSE",industries:"Industries",about:"About",contact:"Contact"},
+    nav:{services:"Services",process:"How we work",hse:"HSE",esg:"ESG",industries:"Industries",about:"About",suppliers:"Suppliers",contact:"Contact"},
     slogan:"Simply Solved",
     heroTitle:"Your shutdown window is fixed. So is our schedule.",
     heroSubtitle:"Turnaround execution, static equipment maintenance, and mechanical support for petrochemical and refining plants across Saudi Arabia, planned to your shutdown sequence and delivered to your HSE standard.",
     ctaQuote:"Request a Quote", ctaServices:"View Our Services",
-    facts:[{v:"11",l:"Service lines"},{v:"Zero Injuries",l:"HSE standard"},{v:"GCC",l:"Site coverage"}],
+    facts:[{v:"13",l:"Service lines"},{v:"Zero Injuries",l:"HSE standard"},{v:"GCC",l:"Site coverage"}],
     servicesLabel:"What we do", servicesTitle:"Our Services",
-    servicesIntro:"Eleven service lines under one contract and one point of coordination, from turnaround execution on site through to sourcing and RFQ management off it.",
+    servicesIntro:"Thirteen service lines under one contract and one point of coordination, from turnaround execution on site through to sourcing and RFQ management off it.",
     services:[
       {title:"Plant Maintenance & Turnarounds", desc:"Return your unit to service on the date you committed to. We plan and execute turnaround scopes across mechanical, static and rotating equipment, sequenced against your shutdown and startup windows.", bullets:["Scope development & work-package build","Mechanical, static & rotating execution","Shutdown/startup sequencing support"]},
-      {title:"Static Equipment Maintenance", desc:"Keep pressure equipment inside its integrity envelope. Inspection, repair and mechanical integrity work on vessels, columns and storage tanks, documented for your integrity management programme.", bullets:["Vessel, column & tank inspection","Structural & mechanical integrity repair","Records prepared for your IMS"]},
-      {title:"Heat Exchanger Services", desc:"Recover lost heat-transfer efficiency and extend bundle life. Tube cleaning, retubing, tube expansion and pressure testing, with the test records your inspectors need.", bullets:["Tube cleaning & internal inspection","Retubing, expansion & re-rolling","Hydro & tube leak testing"]},
-      {title:"Mechanical Maintenance", desc:"Fabrication and erection that passes inspection the first time. Storage tanks, process piping and structural steel built to code-compliant tolerances, with qualified procedures.", bullets:["Piping pre-fabrication & erection","Storage tank erection & fabrication","Specialised welding to qualified procedures"]},
+      {title:"Static Equipment Maintenance", desc:"Keep pressure equipment inside its integrity envelope. Inspection, repair and mechanical integrity work on vessels, columns and storage tanks, delivered through our vetted network of certified specialists and managed end-to-end under one contract, fully documented for your integrity management programme.", bullets:["Vessel, column & tank inspection, certified and QA'd","Mechanical integrity repair, under our direct coordination","Records prepared for your IMS"]},
+      {title:"Heat Exchanger Services", desc:"Recover lost heat-transfer efficiency and extend bundle life. Tube cleaning, retubing, expansion and pressure testing, delivered through certified specialist partners and managed under one contract, with the test records your inspectors need.", bullets:["Tube cleaning & internal inspection","Retubing, expansion & re-rolling, certified and documented","Hydro & tube leak testing, QA'd end-to-end"]},
+      {title:"Mechanical Maintenance", desc:"Fabrication and erection that passes inspection the first time. Storage tanks, process piping and structural steel installed to code-compliant tolerances, with specialised welding delivered by qualified certified welders under our direct supervision.", bullets:["Piping pre-fabrication & erection","Storage tank erection & fabrication","Specialised welding to qualified procedures, supervised on site"]},
+      {title:"Industrial Equipment & Controls Installation", desc:"Get new equipment commissioned right the first time. Installation of industrial machinery, process control systems and equipment fittings across your plant, delivered through our vetted network of certified specialists and managed end-to-end under one contract.", bullets:["Industrial equipment and machinery installation","Process control and instrumentation systems installation","Equipment fittings installation, certified and documented"]},
       {title:"Scaffolding Works", desc:"Safe access, ready when the crew is. Scaffolding designed, erected, inspected and dismantled around your sequence so access never sits on the critical path.", bullets:["Access design for confined/elevated work","Erection, tagging & periodic inspection","Certified scaffolders & supervision"]},
-      {title:"Equipment Rental", desc:"The right equipment on site for the duration of the scope, without a capital purchase. Mobilised, maintained and demobilised by us.", bullets:["Maintenance & turnaround equipment","Mobilisation & demobilisation handled","Short-term & campaign-length terms"]},
+      {title:"Equipment Rental", desc:"The right equipment on site for the duration of the scope, without a capital purchase. Mobilised, maintained and demobilised by us.", bullets:["Motorised equipment, measurement and control instruments","Work platforms, scaffolding and containers, rental only","Construction and building equipment with operator"]},
+      {title:"Industrial & Facility Cleaning", desc:"Keep your site running clean and compliant. External building cleaning and industrial machinery and equipment cleaning, scheduled around your operations.", bullets:["External cleaning for industrial buildings and facilities","Machinery and equipment cleaning","Scheduled or on-demand service"]},
       {title:"Management Consultations", desc:"Decide where maintenance spend actually returns value. Advisory support on maintenance strategy, reliability programmes and turnaround readiness.", bullets:["Maintenance strategy review","Reliability programme development","Turnaround readiness assessment"]},
-      {title:"Business Development", desc:"Enter the Saudi industrial market with a partner already inside it. Market entry and growth support for suppliers targeting the Kingdom's process sector.", bullets:["Market entry planning","Local partner & channel identification","Registration & prequalification support"]},
+      {title:"Business Development", desc:"Advisory support for suppliers entering the Saudi process-sector market: partner identification, prequalification guidance, and local market navigation.", bullets:["Market entry strategy and planning","Local partner and channel identification","Prequalification and registration guidance"]},
       {title:"Sourcing Services", desc:"Find and qualify suppliers before you commit an order. Identification, screening and qualification of vendors for materials, spares and specialised services.", bullets:["Supplier identification & screening","Technical & commercial qualification","Spares & long-lead item sourcing"]},
-      {title:"Contract Support", desc:"Keep contracts administered instead of discovered late. Support across preparation, administration and compliance through the full project lifecycle.", bullets:["Contract preparation & review","Administration through execution","Variation & claim tracking"]},
+      {title:"Contract Support", desc:"Keep contracts administered instead of discovered late. Support across preparation, administration and compliance through the full project lifecycle.", bullets:["Contract preparation & review","Document, record and data verification","Administration & claim tracking through execution"]},
       {title:"RFQ Management", desc:"Run a quotation round that produces comparable bids. End-to-end handling from issue through technical evaluation to award recommendation.", bullets:["RFQ preparation & issue","Bidder clarification management","Technical & commercial evaluation"]}
     ],
     howLabel:"How we work", howTitle:"From Scope to Handover",
@@ -542,8 +619,10 @@ var LANG = {
     ],
     hseLabel:"Safety", hseTitle:"Safety Isn't a Section of the Proposal",
     hseIntro:"Every crew mobilises with current certifications, a reviewed job safety analysis, and a supervisor who holds stop-work authority. We report incidents, near-misses and observations on your system, in your format.",
-    hseStats:[{k:"Total recordable incident rate",v:"0"},{k:"Lost-time incidents",v:"0"},{k:"Workforce with basic HSE training",v:"100%"}],
-    hseNote:"Figures current as of the latest reporting period.",
+    esgLabel:"ESG", esgTitle:"Every Purchase Order Carries a Guaranteed ESG Contribution",
+    esgBody:"Responsible delivery is not a separate initiative at Zexa Solutions Group. It is built into the same methodology behind every scope: formal qualification and scoping before mobilisation, a Zero-Harm HSE standard applied to every crew and every subcontracted line, an equipment-rental model that reduces idle-asset waste instead of pushing unnecessary new purchases, and a documented, contract-administered process from RFQ through to handover. Every purchase order carries a guaranteed contribution to an ESG initiative, funded from within our margin, not billed to the client and not conditional on scope size. Being commercially registered and based in Jubail Industrial City already supports the local employment and governance transparency our clients are accountable for, and this margin-funded contribution extends that commitment into every single order we deliver.",
+    hseStats:[{k:"Job safety analysis",v:"Every task"},{k:"Stop-work authority",v:"Every crew"},{k:"Workforce with basic HSE training",v:"100%"}],
+    hseNote:"This standard is applied on every scope, from day one.",
     industriesLabel:"Where we work", industriesTitle:"Industries We Serve",
     industriesIntro:"Every sector below runs to its own permits, standards and tolerances. We work to yours, not to a generic method statement.",
     industries:["Petrochemicals","Oil & Gas Refining","Power Generation","Water & Utilities","Mining & Minerals","Construction","Manufacturing","Logistics"],
@@ -556,10 +635,17 @@ var LANG = {
     missionLabel:"Mission", missionText:"Execute maintenance and turnaround scopes that return process units to safe, reliable operation on schedule.",
     visionLabel:"Vision", visionText:"To be the maintenance and turnaround partner of choice for petrochemical and refining operators in Saudi Arabia.",
     valuesLabel:"Values", valuesText:"Zero-harm HSE discipline, technical precision, and accountability on every scope of work.",
+    suppliersLabel:"For Suppliers & Partners", suppliersTitle:"Our Supplier & Partner Network",
+    suppliersBody:"Zexa Solutions Group works with a qualified network of suppliers and specialist partners across materials, equipment and specialised services, spanning our thirteen service lines. Every engagement runs through a formal qualification, scoping and contract-administration process, with one accountable point of contact instead of an ad-hoc purchase order.",
+    supplierPoint1:"Commercially registered in Jubail Industrial City",
+    supplierPoint2:"Single point of coordination across mechanical, static equipment, scaffolding, rental and sourcing scopes, under one contract and one team accountable for delivery",
+    supplierPoint3:"Zero-Harm HSE standard applies to every party working under our scope",
+    suppliersCta:"Request Our Capability Statement",
+    supplierMessagePrefill:"I'm a supplier/partner and I'd like to receive Zexa Solutions Group's capability statement.",
     ctaBannerTitle:"Have a scope you need priced?",
     ctaBannerText:"Send drawings, an equipment list, or a rough description. We reply within one working day. For an emergency callout, call instead.",
     contactLabel:"Get in touch", contactTitle:"Contact Us",
-    labelAddress:"Address", labelPhone:"Phone", labelEmail:"Email",
+    labelAddress:"Address", labelPhone:"Phone", labelWhatsapp:"WhatsApp", whatsappCta:"Chat on WhatsApp", labelEmail:"Email", mapLinkText:"Open in Google Maps",
     formCompany:"Company name", formName:"Your name", formEmail:"Work email",
     formMessage:"Describe the scope", formMessageHint:"Unit, equipment, and your target window if you have one.",
     formSend:"Send Enquiry", sending:"Sending…",
@@ -575,11 +661,11 @@ var LANG = {
     consentNote:"We use the details you send only to respond to your enquiry and don't share them with third parties.",
     privacyLink:"Privacy Notice",
     privacyLabel:"Data & Privacy", privacyTitle:"Privacy Notice",
-    privacyIntro:"This notice covers the information collected through the two forms on this site: the quote enquiry and the job application. It does not cover any other data handling by Zexa Solutions Group.",
+    privacyIntro:"This notice covers the information collected through the quote enquiry form on this site. It does not cover any other data handling by Zexa Solutions Group.",
     privacyWhatLabel:"What we collect", privacyWhatText:"Name, company, email, phone number where given, the message you enter, and any file you choose to attach.",
-    privacyWhyLabel:"Why we collect it", privacyWhyText:"Solely to respond to your enquiry or application. We don't use it for marketing and don't sell or rent it to anyone.",
+    privacyWhyLabel:"Why we collect it", privacyWhyText:"Solely to respond to your enquiry. We don't use it for marketing and don't sell or rent it to anyone.",
     privacyWhoLabel:"Who processes it", privacyWhoText:"Submissions are delivered to us through FormSubmit, a third-party form-relay service. FormSubmit transmits the message to our inbox and does not use it for any other purpose.",
-    privacyRetentionLabel:"How long we keep it", privacyRetentionText:"Quote enquiries are kept for as long as needed to respond and follow up on the scope. Job applications are kept on file for future openings unless you ask us to delete them.",
+    privacyRetentionLabel:"How long we keep it", privacyRetentionText:"Quote enquiries are kept for as long as needed to respond and follow up on the scope, unless you ask us to delete them sooner.",
     privacyRightsLabel:"Your rights", privacyRightsText:"You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by emailing",
     footerTagline:"Industrial maintenance, turnaround execution and equipment support for petrochemical and refining plants in Saudi Arabia.",
     footerText:"© 2026 Zexa Solutions Group. All rights reserved.",
@@ -590,25 +676,27 @@ var LANG = {
     dirName:"rtl", toggleLabel:"EN", drawerLangLabel:"English",
     skip:"تخطي إلى المحتوى", menu:"القائمة",
     address:"مدينة الجبيل الصناعية، السعودية",
-    nav:{services:"خدماتنا",process:"كيف نعمل",hse:"السلامة",industries:"القطاعات",about:"من نحن",contact:"تواصل معنا"},
+    nav:{services:"خدماتنا",process:"كيف نعمل",hse:"السلامة",esg:"الاستدامة",industries:"القطاعات",about:"من نحن",suppliers:"للموردين",contact:"تواصل معنا"},
     slogan:"الحل ببساطة",
     heroTitle:"موعد التوقف لديكم ثابت، وجدولنا كذلك.",
     heroSubtitle:"تنفيذ التوقفات الدورية وصيانة المعدات الثابتة والدعم الميكانيكي لمنشآت البتروكيماويات والتكرير في المملكة العربية السعودية، مخطط وفق جدول التوقف لديكم ومنفذ وفق معيار السلامة الخاص بكم.",
     ctaQuote:"اطلب عرض سعر", ctaServices:"استعرض خدماتنا",
-    facts:[{v:"١١",l:"خطوط الخدمة"},{v:"صفر إصابات",l:"معيار السلامة"},{v:"دول الخليج",l:"نطاق التغطية"}],
+    facts:[{v:"١٣",l:"خطوط الخدمة"},{v:"صفر إصابات",l:"معيار السلامة"},{v:"دول الخليج",l:"نطاق التغطية"}],
     servicesLabel:"ماذا نقدم", servicesTitle:"خدماتنا",
-    servicesIntro:"أحد عشر خط خدمة تحت عقد واحد ونقطة تنسيق واحدة، من تنفيذ التوقفات الدورية في الموقع إلى خدمات التوريد وإدارة طلبات الأسعار خارجه.",
+    servicesIntro:"ثلاثة عشر خط خدمة تحت عقد واحد ونقطة تنسيق واحدة، من تنفيذ التوقفات الدورية في الموقع إلى خدمات التوريد وإدارة طلبات الأسعار خارجه.",
     services:[
       {title:"صيانة المصانع والتوقفات الدورية", desc:"إعادة الوحدة إلى التشغيل في الموعد الذي التزمتم به. نخطط وننفذ نطاقات التوقفات الدورية للمعدات الميكانيكية والثابتة والدوارة، بتسلسل يتوافق مع مواعيد التوقف وإعادة التشغيل لديكم.", bullets:["إعداد النطاق وبناء حزم العمل","تنفيذ الأعمال الميكانيكية والثابتة والدوارة","دعم تسلسل التوقف وإعادة التشغيل"]},
-      {title:"صيانة المعدات الثابتة", desc:"الحفاظ على معدات الضغط ضمن حدود سلامتها التشغيلية. أعمال فحص وإصلاح وسلامة ميكانيكية للأوعية والأبراج وخزانات التخزين، موثقة بما يخدم برنامج إدارة السلامة لديكم.", bullets:["فحص الأوعية والأبراج والخزانات","إصلاح السلامة الهيكلية والميكانيكية","سجلات فحص جاهزة لنظام إدارة السلامة"]},
-      {title:"خدمات المبادلات الحرارية", desc:"استعادة كفاءة انتقال الحرارة المفقودة وإطالة عمر الحزمة. تنظيف الأنابيب وإعادة تمديدها وتوسيعها واختبارات الضغط، مع سجلات الاختبار التي يحتاجها مفتشوكم.", bullets:["تنظيف الأنابيب والفحص الداخلي","إعادة التمديد والتوسيع وإعادة الدرفلة","اختبار الضغط الهيدروليكي والتسرب"]},
-      {title:"الصيانة الميكانيكية", desc:"تصنيع وتركيب يجتاز الفحص من المرة الأولى. خزانات تخزين وأنابيب عمليات وهياكل فولاذية تُنفذ وتُلحم وفق التفاوتات المطابقة للكود.", bullets:["التصنيع المسبق للأنابيب وتركيبها","تركيب وتصنيع خزانات التخزين","لحام متخصص وفق إجراءات معتمدة"]},
+      {title:"صيانة المعدات الثابتة", desc:"الحفاظ على معدات الضغط ضمن حدود سلامتها التشغيلية. أعمال فحص وإصلاح وسلامة ميكانيكية للأوعية والأبراج وخزانات التخزين، تُنفذ عبر شبكتنا المعتمدة من المتخصصين المعتمدين وتُدار بالكامل تحت عقد واحد، وموثقة بما يخدم برنامج إدارة السلامة لديكم.", bullets:["فحص الأوعية والأبراج والخزانات، معتمد ومُراقَب الجودة","إصلاح السلامة الهيكلية والميكانيكية، بإدارة مباشرة منا","سجلات فحص جاهزة لنظام إدارة السلامة"]},
+      {title:"خدمات المبادلات الحرارية", desc:"استعادة كفاءة انتقال الحرارة المفقودة وإطالة عمر الحزمة. تنظيف الأنابيب وإعادة تمديدها وتوسيعها واختبارات الضغط، تُنفذ عبر شركاء متخصصين معتمدين وتُدار تحت عقد واحد، مع سجلات الاختبار التي يحتاجها مفتشوكم.", bullets:["تنظيف الأنابيب والفحص الداخلي","إعادة التمديد والتوسيع وإعادة الدرفلة، معتمدة وموثقة","اختبار الضغط الهيدروليكي والتسرب، بإدارة جودة كاملة"]},
+      {title:"الصيانة الميكانيكية", desc:"تصنيع وتركيب يجتاز الفحص من المرة الأولى. خزانات تخزين وأنابيب عمليات وهياكل فولاذية تُركّب وفق التفاوتات المطابقة للكود، مع لحام متخصص ينفذه لحّامون معتمدون تحت إشرافنا المباشر.", bullets:["التصنيع المسبق للأنابيب وتركيبها","تركيب وتصنيع خزانات التخزين","لحام متخصص وفق إجراءات معتمدة، بإشراف ميداني"]},
+      {title:"تركيب المعدات الصناعية وأنظمة التحكم", desc:"شغّل معداتك الجديدة بشكل صحيح من أول مرة. تركيب الآلات الصناعية وأنظمة التحكم في العمليات وتجهيزات المعدات في جميع أنحاء منشأتك، يُنفَّذ عبر شبكتنا المعتمدة من المتخصصين ويُدار بالكامل تحت عقد واحد.", bullets:["تركيب المعدات والآلات الصناعية","تركيب أنظمة التحكم والأجهزة في العمليات الصناعية","تركيب تجهيزات المعدات، معتمد وموثّق"]},
       {title:"أعمال السقالات", desc:"وصول آمن وجاهز عند وصول الفريق. سقالات تُصمم وتُركب وتُفحص وتُفكك وفق تسلسل أعمالكم بحيث لا يصبح الوصول عائقًا على المسار الحرج.", bullets:["تصميم الوصول للأعمال المحصورة والمرتفعة","التركيب ووضع البطاقات والفحص الدوري","فنيو سقالات معتمدون وإشراف مؤهل"]},
-      {title:"تأجير المعدات", desc:"المعدات المناسبة في الموقع طوال مدة النطاق دون شراء رأسمالي. نتولى تعبئتها وصيانتها وسحبها.", bullets:["معدات الصيانة والتوقفات الدورية","تولي أعمال التعبئة والسحب","مدد قصيرة أو ممتدة"]},
+      {title:"تأجير المعدات", desc:"المعدات المناسبة في الموقع طوال مدة النطاق دون شراء رأسمالي. نتولى تعبئتها وصيانتها وسحبها.", bullets:["معدات ذات محركات، وأجهزة قياس وسيطرة","أرصفة عمل وسقالات وحاويات، تأجير فقط","معدات تشييد وبناء مع مشغل"]},
+      {title:"التنظيف الصناعي والمرافق", desc:"حافظ على موقعك نظيفًا ومتوافقًا مع المعايير. تنظيف خارجي للمباني الصناعية وتنظيف الآلات والمعدات الصناعية، بجدولة تناسب عملياتكم.", bullets:["تنظيف خارجي للمباني والمنشآت الصناعية","تنظيف الآلات والمعدات","خدمة مجدولة أو عند الطلب"]},
       {title:"الاستشارات الإدارية", desc:"تحديد المواضع التي يحقق فيها إنفاق الصيانة عائدًا فعليًا. دعم استشاري في استراتيجية الصيانة وبرامج الاعتمادية وجاهزية التوقفات.", bullets:["مراجعة استراتيجية الصيانة","تطوير برامج الاعتمادية","تقييم جاهزية التوقفات الدورية"]},
-      {title:"تطوير الأعمال", desc:"دخول السوق الصناعي السعودي بشريك موجود فيه بالفعل. دعم دخول السوق والنمو للموردين المستهدفين لقطاع العمليات في المملكة.", bullets:["تخطيط دخول السوق","تحديد الشركاء والقنوات المحلية","دعم التسجيل والتأهيل المسبق"]},
+      {title:"تطوير الأعمال", desc:"دعم استشاري للموردين الراغبين في دخول قطاع العمليات الصناعي السعودي: تحديد الشركاء، إرشاد في التأهيل المسبق، والتوجيه في السوق المحلي.", bullets:["استراتيجية وتخطيط دخول السوق","تحديد الشركاء والقنوات المحلية","إرشاد في التأهيل المسبق والتسجيل"]},
       {title:"خدمات التوريد", desc:"إيجاد الموردين وتأهيلهم قبل الالتزام بأي طلب. تحديد وفرز وتأهيل الموردين للمواد وقطع الغيار والخدمات المتخصصة.", bullets:["تحديد الموردين وفرزهم","التأهيل الفني والتجاري","توريد قطع الغيار والأصناف طويلة المدة"]},
-      {title:"دعم العقود", desc:"إدارة العقود أولًا بأول بدلًا من اكتشاف المشكلات متأخرًا. دعم في إعداد العقود وإدارتها والامتثال طوال دورة حياة المشروع.", bullets:["إعداد العقود ومراجعتها","الإدارة خلال مرحلة التنفيذ","تتبع التغييرات والمطالبات"]},
+      {title:"دعم العقود", desc:"إدارة العقود أولًا بأول بدلًا من اكتشاف المشكلات متأخرًا. دعم في إعداد العقود وإدارتها والامتثال طوال دورة حياة المشروع.", bullets:["إعداد العقود ومراجعتها","التحقق من صحة الوثائق والمستندات والبيانات","إدارة التغييرات والمطالبات خلال التنفيذ"]},
       {title:"إدارة طلبات عروض الأسعار", desc:"إدارة جولة تسعير تُنتج عروضًا قابلة للمقارنة. معالجة كاملة من الإصدار إلى التقييم الفني وصولًا إلى توصية الترسية.", bullets:["إعداد طلب عرض السعر وإصداره","إدارة استفسارات مقدمي العروض","التقييم الفني والتجاري"]}
     ],
     howLabel:"كيف نعمل", howTitle:"من تحديد النطاق إلى التسليم",
@@ -626,8 +714,10 @@ var LANG = {
     ],
     hseLabel:"السلامة", hseTitle:"السلامة ليست بندًا في العرض",
     hseIntro:"يصل كل فريق إلى الموقع بشهادات سارية وتحليل سلامة وظيفي مُراجَع ومشرف يملك صلاحية إيقاف العمل. ونرفع تقارير الحوادث والحوادث الوشيكة والملاحظات على نظامكم وبالصيغة التي تعتمدونها.",
-    hseStats:[{k:"معدل الحوادث القابلة للتسجيل",v:"صفر"},{k:"حوادث فقدان وقت العمل",v:"صفر"},{k:"نسبة العمالة الحاصلة على التدريب الأساسي للسلامة",v:"100%"}],
-    hseNote:"الأرقام محدّثة وفق آخر فترة تقارير.",
+    esgLabel:"ESG", esgTitle:"كل أمر شراء يحمل مساهمة مضمونة في مبادرة ESG",
+    esgBody:"التسليم المسؤول ليس مبادرة منفصلة لدى مجموعة زيكسا سولوشنز، بل هو جزء من نفس منهجية العمل خلف كل نطاق: تأهيل وتحديد نطاق رسمي قبل التعبئة، معيار الصفر إصابات مطبّق على كل فريق وكل خط عمل متعاقد عليه من الباطن، نموذج تأجير معدات يقلل هدر الأصول المعطّلة بدل دفعكم نحو شراء رأسمالي غير ضروري، وعملية موثقة لإدارة العقود من طلب عرض السعر وحتى التسليم. كل أمر شراء يحمل مساهمة مضمونة في مبادرة ESG، تُموَّل من ضمن هامش ربحنا، دون أن تُحمَّل عليكم ودون أن تكون مشروطة بحجم النطاق. كوننا مسجلين تجاريًا ومقرنا مدينة الجبيل الصناعية يدعم أصلاً التوظيف المحلي وشفافية الحوكمة التي تلتزمون بها، وهذه المساهمة المموَّلة من هامش الربح تمدّ هذا الالتزام ليشمل كل أمر شراء نُنفّذه.",
+    hseStats:[{k:"تحليل السلامة الوظيفي",v:"لكل مهمة"},{k:"صلاحية إيقاف العمل",v:"لكل فريق"},{k:"نسبة العمالة الحاصلة على التدريب الأساسي للسلامة",v:"100%"}],
+    hseNote:"يُطبّق هذا المعيار على كل نطاق عمل، منذ اليوم الأول.",
     industriesLabel:"أين نعمل", industriesTitle:"القطاعات التي نخدمها",
     industriesIntro:"كل قطاع أدناه يعمل بتصاريحه ومعاييره وتفاوتاته الخاصة. نحن نعمل وفق معاييركم أنتم، لا وفق بيان طريقة عام.",
     industries:["البتروكيماويات","تكرير النفط والغاز","توليد الطاقة","المياه والمرافق","التعدين والمعادن","الإنشاءات","التصنيع","الخدمات اللوجستية"],
@@ -640,10 +730,17 @@ var LANG = {
     missionLabel:"المهمة", missionText:"تنفيذ نطاقات الصيانة والتوقفات الدورية التي تعيد وحدات العمليات إلى تشغيل آمن وموثوق في الموعد المحدد.",
     visionLabel:"الرؤية", visionText:"أن نكون شريك الصيانة والتوقفات الدورية المفضل لمشغلي البتروكيماويات والتكرير في المملكة العربية السعودية.",
     valuesLabel:"القيم", valuesText:"انضباط السلامة بمعيار الحوادث الصفرية، والدقة الفنية، والمساءلة في كل نطاق عمل.",
+    suppliersLabel:"للموردين والشركاء", suppliersTitle:"شبكة موردينا وشركائنا",
+    suppliersBody:"تتعامل مجموعة زيكسا سولوشنز مع شبكة مؤهّلة من الموردين والشركاء المتخصصين في المواد والمعدات والخدمات المتخصصة، عبر خطوط خدماتنا الثلاثة عشر. يمر كل تعامل عبر عملية رسمية للتأهيل وتحديد النطاق وإدارة العقود، بجهة اتصال واحدة مسؤولة بدلًا من أمر شراء عشوائي.",
+    supplierPoint1:"مسجلون تجاريًا في مدينة الجبيل الصناعية",
+    supplierPoint2:"نقطة تنسيق واحدة عبر نطاقات الأعمال الميكانيكية والمعدات الثابتة والسقالات والتأجير والتوريد، ضمن عقد واحد وفريق واحد مسؤول عن التنفيذ",
+    supplierPoint3:"معيار الحوادث الصفرية يسري على كل طرف يعمل ضمن نطاقنا",
+    suppliersCta:"اطلب بيان قدرات الشركة",
+    supplierMessagePrefill:"نحن مورد/شريك ونرغب بالحصول على بيان قدرات مجموعة زيكسا سولوشنز.",
     ctaBannerTitle:"لديكم نطاق عمل بحاجة إلى تسعير؟",
     ctaBannerText:"أرسلوا الرسومات أو قائمة المعدات أو وصفًا مبدئيًا. نرد خلال يوم عمل واحد. وللاستدعاء الطارئ، يُرجى الاتصال مباشرة.",
     contactLabel:"تواصل معنا", contactTitle:"اتصل بنا",
-    labelAddress:"العنوان", labelPhone:"الهاتف", labelEmail:"البريد الإلكتروني",
+    labelAddress:"العنوان", labelPhone:"الهاتف", labelWhatsapp:"واتساب", whatsappCta:"تواصل عبر واتساب", labelEmail:"البريد الإلكتروني", mapLinkText:"فتح في خرائط جوجل",
     formCompany:"اسم الشركة", formName:"الاسم", formEmail:"البريد الإلكتروني للعمل",
     formMessage:"صف نطاق العمل", formMessageHint:"الوحدة والمعدات والنافذة الزمنية المستهدفة إن وُجدت.",
     formSend:"إرسال الطلب", sending:"جارٍ الإرسال…",
@@ -659,11 +756,11 @@ var LANG = {
     consentNote:"نستخدم البيانات التي ترسلونها للرد على استفساركم فقط، ولا نشاركها مع أي طرف ثالث.",
     privacyLink:"إشعار الخصوصية",
     privacyLabel:"البيانات والخصوصية", privacyTitle:"إشعار الخصوصية",
-    privacyIntro:"يغطي هذا الإشعار البيانات التي تُجمع عبر النماذج في هذا الموقع، وهي نموذج طلب عرض السعر ونموذج التقديم للوظائف. ولا يغطي أي تعامل آخر مع البيانات من قبل مجموعة زيكسا سولوشنز.",
+    privacyIntro:"يغطي هذا الإشعار البيانات التي تُجمع عبر نموذج طلب عرض السعر في هذا الموقع. ولا يغطي أي تعامل آخر مع البيانات من قبل مجموعة زيكسا سولوشنز.",
     privacyWhatLabel:"ما الذي نجمعه", privacyWhatText:"الاسم، اسم الشركة، البريد الإلكتروني، رقم الهاتف إن أُدخل، الرسالة التي تكتبونها، وأي ملف تختارون إرفاقه.",
-    privacyWhyLabel:"لماذا نجمعه", privacyWhyText:"للرد على استفساركم أو طلبكم فقط. لا نستخدمه لأغراض تسويقية ولا نبيعه أو نؤجره لأي جهة.",
+    privacyWhyLabel:"لماذا نجمعه", privacyWhyText:"للرد على استفساركم فقط. لا نستخدمه لأغراض تسويقية ولا نبيعه أو نؤجره لأي جهة.",
     privacyWhoLabel:"من يعالج البيانات", privacyWhoText:"تصلنا الطلبات عبر FormSubmit، وهي خدمة وسيطة لنقل بيانات النماذج من طرف ثالث. تقوم FormSubmit بتوصيل الرسالة إلى بريدنا الإلكتروني ولا تستخدمها لأي غرض آخر.",
-    privacyRetentionLabel:"مدة الاحتفاظ بالبيانات", privacyRetentionText:"تُحفظ طلبات عروض الأسعار للمدة اللازمة للرد ومتابعة النطاق. تُحفظ طلبات التوظيف للرجوع إليها عند توفر وظائف مستقبلية، ما لم تطلبوا حذفها.",
+    privacyRetentionLabel:"مدة الاحتفاظ بالبيانات", privacyRetentionText:"تُحفظ طلبات عروض الأسعار للمدة اللازمة للرد ومتابعة النطاق، ما لم تطلبوا حذفها قبل ذلك.",
     privacyRightsLabel:"حقوقكم", privacyRightsText:"يمكنكم أن تطلبوا معرفة البيانات المحفوظة لديكم، أو تصحيحها، أو حذفها، عبر مراسلتنا على",
     footerTagline:"الصيانة الصناعية وتنفيذ التوقفات الدورية ودعم المعدات لمنشآت البتروكيماويات والتكرير في المملكة العربية السعودية.",
     footerText:"© 2026 مجموعة زيكسا سولوشنز. جميع الحقوق محفوظة.",
@@ -676,12 +773,29 @@ function get(obj, path){
   return path.split('.').reduce(function(o,k){ return (o===undefined||o===null) ? o : o[k]; }, obj);
 }
 
+var SERVICE_ICONS = [
+  '<svg viewBox="0 0 24 24"><path d="M20 7a8 8 0 1 0 1.5 6"/><path d="M20 3v4h-4"/></svg>',
+  '<svg viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="3"/><line x1="7" y1="9.5" x2="17" y2="9.5"/><line x1="7" y1="15" x2="17" y2="15"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M3 8h4l2 4 2-8 2 8 2-4h4"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 1 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8z"/></svg>',
+  '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="8" x2="9" y2="16"/><circle cx="9" cy="11" r="1.3" fill="currentColor" stroke="none"/><line x1="15" y1="8" x2="15" y2="16"/><circle cx="15" cy="14" r="1.3" fill="currentColor" stroke="none"/></svg>',
+  '<svg viewBox="0 0 24 24"><line x1="6" y1="3" x2="6" y2="21"/><line x1="18" y1="3" x2="18" y2="21"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="16" x2="18" y2="16"/><line x1="6" y1="8" x2="18" y2="16"/><line x1="18" y1="8" x2="6" y2="16"/></svg>',
+  '<svg viewBox="0 0 24 24"><rect x="3" y="8" width="12" height="10" rx="1.5"/><path d="M3 12h12"/><circle cx="18" cy="16" r="4.2"/><path d="M18 13.7V16l1.6 1"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2.1 2.1M15.4 15.4l2.1 2.1M6.5 17.5l2.1-2.1M15.4 8.6l2.1-2.1"/><circle cx="12" cy="12" r="2.1"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4V5z"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-8"/><path d="M20 7h-4M20 7v4"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
+  '<svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14.3l2 2 4-4.3"/></svg>',
+  '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2.5" width="6" height="3" rx="1"/><line x1="9" y1="10.5" x2="15" y2="10.5"/><line x1="9" y1="14.5" x2="15" y2="14.5"/><line x1="9" y1="18.5" x2="13" y2="18.5"/></svg>'
+];
+
 function renderLists(lang){
   var d = LANG[lang];
 
-  var svcHtml = d.services.map(function(s){
+  var svcHtml = d.services.map(function(s, i){
     var bullets = s.bullets.map(function(b){ return '<li>'+b+'</li>'; }).join('');
-    return '<article class="card"><h3>'+s.title+'</h3><p>'+s.desc+'</p><ul>'+bullets+'</ul></article>';
+    var icon = SERVICE_ICONS[i] || '';
+    return '<article class="card" id="service-'+i+'"><div class="card-icon" aria-hidden="true">'+icon+'</div><h3>'+s.title+'</h3><p>'+s.desc+'</p><ul>'+bullets+'</ul></article>';
   }).join('');
   document.getElementById('services-grid').innerHTML = svcHtml;
 
@@ -706,8 +820,8 @@ function renderLists(lang){
   var benHtml = d.benefits.map(function(b){ return '<li>'+b+'</li>'; }).join('');
   document.getElementById('benefits-list').innerHTML = benHtml;
 
-  var footSvc = d.services.slice(0,5).map(function(s){
-    return '<li><a href="#services">'+s.title+'</a></li>';
+  var footSvc = d.services.slice(0,5).map(function(s, i){
+    return '<li><a href="#service-'+i+'">'+s.title+'</a></li>';
   }).join('');
   document.getElementById('footer-services').innerHTML = footSvc;
 }
@@ -747,6 +861,24 @@ function toggleLang(){
 document.getElementById('lang-toggle').addEventListener('click', toggleLang);
 document.getElementById('drawer-lang').addEventListener('click', function(){ toggleLang(); closeDrawer(); });
 
+// ---- focus trap helper: keeps Tab/Shift+Tab cycling inside an open drawer/modal
+// instead of escaping into the hidden page content behind it ----
+function getFocusable(container){
+  var items = container.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])');
+  return Array.prototype.filter.call(items, function(el){ return el.offsetParent !== null; });
+}
+function trapTabKey(container, e){
+  if (e.key !== 'Tab') return;
+  var focusable = getFocusable(container);
+  if (!focusable.length) return;
+  var first = focusable[0], last = focusable[focusable.length - 1];
+  if (e.shiftKey){
+    if (document.activeElement === first){ e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+}
+
 // ---- mobile drawer ----
 var drawer = document.getElementById('drawer');
 var scrim = document.getElementById('scrim');
@@ -769,6 +901,7 @@ function closeDrawer(){
 }
 function onDrawerKeydown(e){
   if (e.key === 'Escape') closeDrawer();
+  trapTabKey(drawer, e);
 }
 menuOpenBtn.addEventListener('click', openDrawer);
 drawerCloseBtn.addEventListener('click', closeDrawer);
@@ -911,6 +1044,49 @@ function setHidden(form, name, value){
     form.appendChild(el);
   }
   el.value = value;
+}
+
+// ---- privacy notice modal ----
+var privacyModal = document.getElementById('privacy-modal');
+var privacyModalClose = document.getElementById('privacy-modal-close');
+var privacyOpener = null;
+
+function openPrivacyModal(e){
+  if (e) e.preventDefault();
+  privacyOpener = document.activeElement;
+  privacyModal.hidden = false;
+  privacyModalClose.focus();
+  document.addEventListener('keydown', onPrivacyModalKeydown);
+}
+function closePrivacyModal(){
+  privacyModal.hidden = true;
+  document.removeEventListener('keydown', onPrivacyModalKeydown);
+  if (privacyOpener) privacyOpener.focus();
+}
+function onPrivacyModalKeydown(e){
+  if (e.key === 'Escape') closePrivacyModal();
+  trapTabKey(privacyModal, e);
+}
+document.querySelectorAll('.privacy-link').forEach(function(a){
+  a.addEventListener('click', openPrivacyModal);
+});
+privacyModalClose.addEventListener('click', closePrivacyModal);
+privacyModal.addEventListener('click', function(e){
+  if (e.target === privacyModal) closePrivacyModal();
+});
+
+// ---- suppliers CTA: route to the RFQ form instead of relying on a mailto: link ----
+var suppliersCta = document.getElementById('suppliers-cta');
+if (suppliersCta){
+  suppliersCta.addEventListener('click', function(e){
+    e.preventDefault();
+    var msgField = document.getElementById('rfq-message');
+    if (msgField && !msgField.value.trim()){
+      msgField.value = LANG[window.__currentLang].supplierMessagePrefill;
+    }
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    if (msgField) msgField.focus();
+  });
 }
 
 // ---- init ----
