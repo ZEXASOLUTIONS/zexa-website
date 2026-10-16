@@ -989,50 +989,18 @@ form.addEventListener('submit', async function(e){
   var d = LANG[window.__currentLang];
   var subject = 'RFQ / Inquiry from ' + (form.company.value || form.name.value || 'Website');
 
-  // FormSubmit's AJAX endpoint (used below) only documents plain-field submissions.
-  // Their own attachment example uses a traditional, page-navigating multipart POST instead. That is the only path they document as actually delivering the file. So: if a file is
-  // attached, fall back to a real form submission (redirected back here via _next) instead of
-  // fetch/AJAX. Text-only messages keep the instant, no-reload path.
-  if (fileInput.files[0]){
-    submitBtn.disabled = true;
-    submitBtn.textContent = d.sending;
-    setHidden(form, '_subject', subject);
-    setHidden(form, '_template', 'table');
-    setHidden(form, '_captcha', 'false');
-    setHidden(form, '_next', location.origin + location.pathname + '?sent=1#contact');
-    form.action = 'https://formsubmit.co/' + FORM_EMAIL;
-    form.method = 'POST';
-    form.enctype = 'multipart/form-data';
-    form.submit(); // native submit. Does not re-trigger this listener, page will navigate away and back
-    return;
-  }
-
+  // Every submission goes through FormSubmit's standard form POST so their anti-spam
+  // captcha page is shown (the AJAX endpoint cannot show it). After the captcha the
+  // visitor is sent back here via _next and sees the success message.
   submitBtn.disabled = true;
   submitBtn.textContent = d.sending;
-
-  var fd = new FormData();
-  fd.append('_subject', subject);
-  fd.append('_template', 'table');
-  fd.append('_captcha', 'false');
-  fd.append('company', form.company.value);
-  fd.append('name', form.name.value);
-  fd.append('email', form.email.value);
-  fd.append('message', form.message.value);
-
-  try{
-    var res = await fetch('https://formsubmit.co/ajax/' + FORM_EMAIL, { method:'POST', headers:{ Accept:'application/json' }, body: fd });
-    if (res.ok){
-      okMsg.classList.add('show');
-      form.reset();
-    } else {
-      errMsg.classList.add('show');
-    }
-  } catch(err){
-    errMsg.classList.add('show');
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = LANG[window.__currentLang].formSend;
-  }
+  setHidden(form, '_subject', subject);
+  setHidden(form, '_template', 'table');
+  setHidden(form, '_next', location.origin + location.pathname + '?sent=1#contact');
+  form.action = 'https://formsubmit.co/' + FORM_EMAIL;
+  form.method = 'POST';
+  form.enctype = 'multipart/form-data';
+  form.submit(); // native submit. Does not re-trigger this listener
 });
 
 function setHidden(form, name, value){
